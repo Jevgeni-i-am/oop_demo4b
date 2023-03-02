@@ -54,9 +54,9 @@ public class Ostotapahtuma {
     @Override
     public String toString() {
         return "Asiakas: "+asiakas.getNimi() + " (" + asiakas.getAsiakasNumero() + ")," +asiakas.getOstojaTehty()+"\n"+
-                "Tuote" +tuote.getNimi()+ " (" + tuote.getHinta() + " €.)\n"+
-                "Myyja" +myyja.getNimi()+" ("+myyja.getTunniste()+") \n"+
-                "итого///";
+                "Myyja" +myyja.getNimi()+" ("+myyja.getTunniste()+" ) "+myyja.getProvisiot()+"\n"+
+                "Tuote" +tuote.getNimi()+ " ( Saldo: "+tuote.getSaldo()+" Hinta: " + tuote.getHinta() + " €.)\n"+hinta;
+
     }
 
 

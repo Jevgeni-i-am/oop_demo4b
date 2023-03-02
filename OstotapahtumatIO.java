@@ -7,8 +7,8 @@ public class OstotapahtumatIO {
 
 
     public static void main(String[] args) {
-ostotapahtumaWriteTest();
-ostotapahtumaReadTest();
+            ostotapahtumaWriteTest();
+            ostotapahtumaReadTest();
     }
 
     public static void ostotapahtumaWriteTest() {
@@ -60,34 +60,28 @@ ostotapahtumaReadTest();
      * <code>VerkkokauppaIO.EROTIN</code>
      *
      * @param data datarivi, josta tiedot parsitaan
-     * @return uuden Myyja-olion dataan perustuen
+     * @return uuden Ostotapahtuma-olion dataan perustuen
      */
     public static Ostotapahtuma parsiOstotapahtuma(String data) {
         String[] tiedot = data.split(VerkkokauppaIO.EROTIN);
         // Tässä vaiheessa tulee tietää tietojen järjestys
 
-        // Asiakas:
-        String asNum=tiedot[0];
-        String asNimi=tiedot[1];
-        double asOstojaTehty = Double.parseDouble(tiedot[2]);
+        System.out.println("Data: "+data);
+        System.out.println("T0: " +tiedot[0]);
+        System.out.println("T1: " +tiedot[1]);
+        System.out.println("T2: " +tiedot[2]);
+        System.out.println("T3: " +tiedot[3]);
+        System.out.println("T4: " +tiedot[4]);
+        System.out.println("T5: " +tiedot[5]);
+        Asiakas asiakas=new Asiakas(tiedot[0], tiedot[1],Double.parseDouble(tiedot[2]));
+        Myyja myyja = new Myyja(tiedot[3],tiedot[4],Double.parseDouble(tiedot[5]));
+        Tuote tuote = new Tuote(tiedot[6],Integer.parseInt(tiedot[7]),Double.parseDouble(tiedot[8]));
 
-        // Myyjä:
-        String myyjaTunniste = tiedot[6];
-        String myyjaNimi = tiedot[7];
-        double myyjanProvisiot= Double.parseDouble(tiedot[8]);
-
-        // Tuote:
-        String tuoteNimi = tiedot[3];
-        int tuoteSaldo = Integer.parseInt(tiedot[4]);
-        double tuoteHinta = Double.parseDouble(tiedot[5]);
-
-        // int määrä ja double hinta
+        // int määrä
         int tapahtumanTuoteMaara = Integer.parseInt(tiedot[9]);
 
 
-        return new Ostotapahtuma(new Asiakas(asNum, asNimi, asOstojaTehty),
-                new Myyja(myyjaTunniste,myyjaNimi,myyjanProvisiot),
-                new Tuote(tuoteNimi,tuoteSaldo,tuoteHinta),tapahtumanTuoteMaara);
+        return new Ostotapahtuma(asiakas,myyja,tuote,tapahtumanTuoteMaara);
     }
 
 
