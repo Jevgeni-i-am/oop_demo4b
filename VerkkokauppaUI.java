@@ -1,4 +1,9 @@
-
+/**
+ * Jaettu logiikka VerkkokauppaIO -> AsiakasIO, TuoteIO, MyyjaIP & OstotapahtumatIO
+ *
+ * Yksinkertaisesti ei riittää aikaa saadaa paketti kasaan.
+ * Mene VerkkokauppaIO.java tiedostoon ja aloita testaaminen siitä
+ */
 
 import java.util.ArrayList;
 import java.util.Scanner;

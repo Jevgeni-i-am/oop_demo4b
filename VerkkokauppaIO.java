@@ -7,6 +7,9 @@ import java.util.Scanner;
  * ja lataamiseen tietovarastosta.
  *
  * @author Erkki
+ *
+ *
+ * @ Oppilas : Jevgeni Liski
  */
 public class VerkkokauppaIO {
 
@@ -34,6 +37,13 @@ public class VerkkokauppaIO {
         MyyjatIO.myyjaWriteTest();
         System.out.println("Luetaan tallennetut myyjät:");
         MyyjatIO.myyjaReadTest();
+
+        System.out.println();
+        System.out.println("Testataan myyjien tallentaminen tiedostoon.... ");
+        OstotapahtumatIO.ostotapahtumaWriteTest();
+        System.out.println("Luetaan tallennetut myyjät:");
+        OstotapahtumatIO.ostotapahtumaReadTest();
+
     }
 
 
