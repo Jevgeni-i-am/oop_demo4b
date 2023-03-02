@@ -28,6 +28,8 @@ public class OstotapahtumatIO {
         ArrayList<Ostotapahtuma> al = lueOstotapahtumat("ostotapahtumat.csv");
         for (Ostotapahtuma os : al) {
             System.out.println(os);
+
+
         }
     }
 
