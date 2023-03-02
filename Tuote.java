@@ -1,6 +1,6 @@
+import java.io.Serializable;
 
-
-public class Tuote {
+public class Tuote implements Serializable {
     private String nimi;
     private int saldo;
     private double hinta;

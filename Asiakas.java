@@ -1,6 +1,6 @@
+import java.io.Serializable;
 
-
-public class Asiakas {
+public class Asiakas implements Serializable {
     private String asiakasNumero;
     private String nimi;
     private double ostojaTehty;

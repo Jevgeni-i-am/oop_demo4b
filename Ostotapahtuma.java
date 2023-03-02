@@ -1,6 +1,6 @@
+import java.io.Serializable;
 
-
-public class Ostotapahtuma {
+public class Ostotapahtuma implements Serializable {
     private Asiakas asiakas;
     private Myyja myyja;
     private Tuote tuote;

@@ -1,6 +1,6 @@
+import java.io.Serializable;
 
-
-public class Myyja {
+public class Myyja implements Serializable {
     private String tunniste;
     private String nimi;
     private double provisiot;
