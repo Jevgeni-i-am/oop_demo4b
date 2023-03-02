@@ -42,6 +42,20 @@ public class Myyja {
             this.provisiot += provisio;
         }
     }
+
+    public String getData(String erotinmerkki) {
+        String data = tunniste + erotinmerkki;
+        data += nimi + erotinmerkki;
+        data += provisiot;
+
+        return data;
+    }
+
+    @Override
+    public String toString() {
+        return nimi + " (" + tunniste + "), Myyjän provisio: " + provisiot;
+    }
+
 }
 
 

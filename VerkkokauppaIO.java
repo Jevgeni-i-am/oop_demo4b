@@ -11,15 +11,30 @@ import java.util.Scanner;
 public class VerkkokauppaIO {
 
     public static void main(String[] args) {
+        test();
+   }
+
+    public static void test() {
         // Tähän voi kirjoittaa koodia, jolla testata
         // kirjoitus- ja lukumetodien toimintaa helposti
-
-       // AsiakasIO.asiakasWriteTest();
+        System.out.println();
+        System.out.println("Testataan asiakkaiden tallentaminen tiedostoon.... ");
+        AsiakasIO.asiakasWriteTest();
+        System.out.println("Luetaan tallennetut asiakkaat:");
         AsiakasIO.asiakasReadTest();
 
+        System.out.println();
+        System.out.println("Testataan tuotteiden tallentaminen tiedostoon.... ");
         TuotteetIO.tuoteWriteTest();
+        System.out.println("Luetaan tallennetut tuotteet:");
         TuotteetIO.tuoteReadTest();
-   }
+
+        System.out.println();
+        System.out.println("Testataan myyjien tallentaminen tiedostoon.... ");
+        MyyjatIO.myyjaWriteTest();
+        System.out.println("Luetaan tallennetut myyjät:");
+        MyyjatIO.myyjaReadTest();
+    }
 
 
     public static final String EROTIN = ";";

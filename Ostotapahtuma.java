@@ -19,6 +19,8 @@ public class Ostotapahtuma {
         hinta = hinta - hinta * (asiakas.getAlennusprosentti() / 100);
     }
 
+
+
     public Asiakas getAsiakas() {
         return asiakas;
     }
@@ -38,4 +40,24 @@ public class Ostotapahtuma {
     public double getHinta() {
         return hinta;
     }
+
+    public String getData(String erotinmerkki) {
+        String data = asiakas + erotinmerkki;
+        data +=  myyja+ erotinmerkki;
+        data += tuote+ erotinmerkki;
+        data += maara+ erotinmerkki;
+        data += hinta;
+
+        return data;
+    }
+
+    @Override
+    public String toString() {
+        return "Asiakas: "+asiakas.getNimi() + " (" + asiakas.getAsiakasNumero() + ")," +asiakas.getOstojaTehty()+"\n"+
+                "Tuote" +tuote.getNimi()+ " (" + tuote.getHinta() + " €.)\n"+
+                "Myyja" +myyja.getNimi()+" ("+myyja.getTunniste()+") \n"+
+                "итого///";
+    }
+
+
 }

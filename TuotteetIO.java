@@ -15,8 +15,8 @@ public class TuotteetIO {
         ArrayList<Tuote> al = new ArrayList<>();
         al.add(new Tuote("Omena", 15, 10));
         al.add(new Tuote("Päärynä", 25, 55.50));
-      //  al.add(new Tuote("Muistitikku", 53, 23.25));
-      //  al.add(new Tuote("Auto", 1, 15000));
+      al.add(new Tuote("Muistitikku", 53, 23.25));
+      al.add(new Tuote("Auto", 1, 15000));
         kirjoitaTuotteet(al, "tuotteet.csv");
     }
 
